@@ -46,8 +46,8 @@ production:
 # Documentation: http://jekyllrb.com/docs/configuration/#default-configuration
 
 # Where things are
-collections:
-  - portfolio
+# collections:
+#   - portfolio
 
 # Handling Reading
 exclude:
