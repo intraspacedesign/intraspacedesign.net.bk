@@ -51,6 +51,8 @@ collections:
 
 # Handling Reading
 exclude:
+  - "node_modules"
+  - "src"
   - "Gemfile"
   - "Gemfile.lock"
   - "gulpfile.js"

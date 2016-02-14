@@ -4,6 +4,8 @@
   "description": "Intra Space Design DotNet",
   "main": "index.html",
   "scripts": {
+    "start": "node node_modules/gulp/bin/gulp.js serve",
+    "task": "node node_modules/gulp/bin/gulp.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,8 +25,15 @@
   },
   "homepage": "https://github.com/intraspacedesign/intraspacedesign.net#readme",
   "devDependencies": {
-    "browser-sync": "^2.11.1",
-    "gulp": "^3.9.1",
-    "gulp-load-plugins": "^1.2.0"
+    "autoprefixer": "^6.3.3",
+    "browser-sync": "2.11.1",
+    "gulp": "gulpjs/gulp#56e3e56",
+    "gulp-csso": "^1.0.1",
+    "gulp-flatten": "^0.2.0",
+    "gulp-load-plugins": "1.2.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-scss-lint": "^0.3.9",
+    "gulp-sourcemaps": "^1.6.0"
   }
 }

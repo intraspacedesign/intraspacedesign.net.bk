@@ -10,3 +10,6 @@ _site/
 
 # Package manager directories
 node_modules/
+
+# Log files
+npm-debug.log
