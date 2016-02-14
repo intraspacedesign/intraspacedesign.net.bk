@@ -5,6 +5,19 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
+# Build configuration
+## Dependencies
+markdown:         kramdown
+highlighter:      rouge
+kramdown:
+  auto_ids: true
+## Permalinks
+permalink:        pretty
+## Server
+source:           src
+destination:      src/_site
+
+
 # Site settings
 title: Your awesome title
 email: your-email@domain.com
@@ -16,6 +29,3 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
-
-# Build settings
-markdown: kramdown
