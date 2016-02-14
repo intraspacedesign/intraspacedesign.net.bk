@@ -29,8 +29,8 @@ github_username:  jekyll
 # Documentation: http://jekyllrb.com/docs/configuration/
 
 # Where things are
-source:       ./src
-destination:  ./src/_site
+source:       #./src
+destination:  #./src/_site
 plugins_dir:  ./src/_plugins
 layouts_dir:  ./src/_layouts
 data_dir:     ./src/_data
