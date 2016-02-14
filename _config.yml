@@ -40,9 +40,9 @@ includes_dir: ./src/_includes
 # Conversion
 markdown:    kramdown
 # highlighter: rouge
-lsi:         false
-excerpt_separator: "\n\n"
-incremental: false
+# lsi:         false
+# excerpt_separator: "\n\n"
+# incremental: false
 
 # Serving
 detach:  false
@@ -51,6 +51,6 @@ host:    0.0.0.0
 ## baseurl: defined in site configuration ##
 
 # Outputting
-permalink:     pretty
-paginate_path: /page:num
-timezone:      null
+# permalink:     pretty
+# paginate_path: /page:num
+# timezone:      null
