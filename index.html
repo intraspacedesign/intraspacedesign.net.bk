@@ -1,16 +1,16 @@
 ---
 layout: default
 images:
-  - source_path: /uploads/steelcase_a.jpg
+  - image_url_path: /uploads/steelcase_a.jpg
     image_name: Some text here
-  - source_path: /uploads/keyboard-shortcuts.png
+  - image_url_path: /uploads/keyboard-shortcuts.png
     image_name: Alternative Text
 ---
 
 <div class="home">
 
   {% for image in page.images %}
-  <img src="{{ image.source_path }}" alt="image.image_name">
+  <img src="{{ image.image_url_path }}" alt="image.image_name">
   {% endfor %}
 
   <!--<h1 class="page-heading">Posts</h1>-->
