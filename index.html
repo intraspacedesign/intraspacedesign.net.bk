@@ -1,14 +1,15 @@
 ---
 layout: default
 
-images_path:
-  - /uploads/steelcase_a.jpg
+images:
+  - src_path: /uploads/steelcase_a.jpg
+    alt_text: Some text here
 ---
 
 <div class="home">
 
-  {% for image in page.images_path %}
-  <img src="{{ image }}" alt="">
+  {% for image in page.images %}
+  <img src="{{ image.src_path }}" alt="image.alt_text">
   {% endfor %}
 
   <!--<h1 class="page-heading">Posts</h1>-->
