@@ -16,7 +16,7 @@ description: > # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
   
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "" # does not include hostname / the subpath of your site, e.g. /blog 
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 
 twitter_username: jekyllrb
@@ -26,6 +26,7 @@ github_username:  jekyll
 #
 # Build configuration
 #
+# Documentation: http://jekyllrb.com/docs/configuration/
 
 # Where things are
 source:       ./src
@@ -34,17 +35,22 @@ plugins_dir:  ./src/_plugins
 layouts_dir:  ./src/_layouts
 data_dir:     ./src/_data
 includes_dir: ./src/_includes
-collections:  null
+# collections:  null
 
 # Conversion
 markdown:    kramdown
-highlighter: rouge
+# highlighter: rouge
 lsi:         false
 excerpt_separator: "\n\n"
 incremental: false
 
 # Serving
 detach:  false
-port:    4000
-host:    127.0.0.1
-baseurl: "" # does not include hostname
+port:    9001
+host:    0.0.0.0
+## baseurl: defined in site configuration ##
+
+# Outputting
+permalink:     pretty
+paginate_path: /page:num
+timezone:      null
