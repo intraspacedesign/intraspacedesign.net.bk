@@ -58,6 +58,7 @@ GEM
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     redcarpet (3.3.4)
+    rouge (1.10.1)
     safe_yaml (1.0.4)
     sass (3.4.21)
     sawyer (0.6.0)
@@ -72,6 +73,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (= 2.4.0)
+  rouge
 
 BUNDLED WITH
    1.11.2

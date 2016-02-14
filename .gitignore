@@ -1,4 +1,12 @@
+#
+# git ignore
+#
+
+# Jekyll ignores
 _site/
 .sass-cache/
 .workspace/
 .jekyll-metadata
+
+# Package manager directories
+node_modules/

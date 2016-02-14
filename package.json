@@ -16,10 +16,15 @@
     "Design",
     "DotNet"
   ],
-  "author": "Joshua L Geschwendt",
+  "author": "Joshua L Geschwendt <joshua@geschwendt.com>",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/intraspacedesign/intraspacedesign.net/issues"
   },
-  "homepage": "https://github.com/intraspacedesign/intraspacedesign.net#readme"
+  "homepage": "https://github.com/intraspacedesign/intraspacedesign.net#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.0"
+  }
 }

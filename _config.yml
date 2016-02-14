@@ -4,6 +4,7 @@
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
+#
 
 #
 # Site configuration
@@ -15,42 +16,46 @@ description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-  
-baseurl: "" # does not include hostname / the subpath of your site, e.g. /blog 
+
+baseurl: "" # does not include hostname / the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 
 twitter_username: jekyllrb
 github_username:  jekyll
 
+#
+# Release configuration
+#
+# Documentation: http://docs.cloudcannon.com/hosting/environments/
+
+development:
+  asset_url: "http://localhost:1337/"
+  app_url: "http://localhost:3000/"
+
+staging:
+  asset_url: "https://staging.example.org/assets/"
+  app_url: "https://staging.example.org/"
+
+production:
+  asset_url: "https://cdn.example.org/"
+  app_url: "https://app.example.org/"
 
 #
 # Build configuration
 #
 # Documentation: http://jekyllrb.com/docs/configuration/#default-configuration
 
-# Where things are / These have no effect within cloudcannon.
-# source:       .
-# destination:  ./_site
-# plugins_dir:  ./_plugins
-# layouts_dir:  ./_layouts
-# data_dir:     ./_data
-# includes_dir: ./_includes
-# collections:  null
+# Where things are
+collections:
+  - portfolio
+
+# Handling Reading
+exclude:
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "gulpfile.js"
+  - "package.json"
+  - "README.md"
 
 # Conversion
-markdown:    kramdown
-# highlighter: rouge
-# lsi:         false
-# excerpt_separator: "\n\n"
-# incremental: false
-
-# Serving
-detach:  false
-port:    9001
-host:    0.0.0.0
-## baseurl: defined in `site configuration` ##
-
-# Outputting
-# permalink:     pretty
-# paginate_path: /page:num
-# timezone:      null
+markdown: kramdown
