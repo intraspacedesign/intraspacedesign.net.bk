@@ -1,13 +1,13 @@
 ---
 layout: default
 
-image_path:
+images_path:
   - /uploads/steelcase_a.jpg
 ---
 
 <div class="home">
 
-  {% for image in page.image_paths %}
+  {% for image in page.images_path %}
   <img src="{{ image }}" alt="">
   {% endfor %}
 
