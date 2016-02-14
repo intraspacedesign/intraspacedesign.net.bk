@@ -3,7 +3,7 @@ layout: page
 title: Awards
 permalink: /awards/
 
-published:
+publishings:
   - Haworth Houston Showroom, Interior Design, June 1982
   - NeoCon Chicago Showroom, Contract, 1982
   - Toronto Showroom, Contract, 1983
@@ -14,6 +14,7 @@ awards:
   - World Workplace, Salt Lake City, "Most innovative use of materials," 1998
   - Steelcase Inc. University, Gov. Engler christened location as benchmark in cutting edge educational facilities, 2000
   - Brayton International, Dupont Merit Award for small office category, 2004
+
 ---
 
 <div class="page-content">
@@ -22,8 +23,8 @@ awards:
   </header>
   <h2 class="editable">Published:</h2>
   <ul>
-    {% for published in page.published %}
-    <li>{{ published }}</li>
+    {% for publishings in page.publishings %}
+    <li>{{ publishings }}</li>
     {% endfor %}
   </ul>
 
