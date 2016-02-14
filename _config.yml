@@ -26,15 +26,15 @@ github_username:  jekyll
 #
 # Build configuration
 #
-# Documentation: http://jekyllrb.com/docs/configuration/
+# Documentation: http://jekyllrb.com/docs/configuration/#default-configuration
 
-# Where things are
-source:       #./src
-destination:  #./src/_site
-plugins_dir:  ./src/_plugins
-layouts_dir:  ./src/_layouts
-data_dir:     ./src/_data
-includes_dir: ./src/_includes
+# Where things are / These have no effect within cloudcannon.
+# source:       .
+# destination:  ./_site
+# plugins_dir:  ./_plugins
+# layouts_dir:  ./_layouts
+# data_dir:     ./_data
+# includes_dir: ./_includes
 # collections:  null
 
 # Conversion
@@ -48,7 +48,7 @@ markdown:    kramdown
 detach:  false
 port:    9001
 host:    0.0.0.0
-## baseurl: defined in site configuration ##
+## baseurl: defined in `site configuration` ##
 
 # Outputting
 # permalink:     pretty

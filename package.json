@@ -1,0 +1,25 @@
+{
+  "name": "intraspacedesign.net",
+  "version": "0.0.0",
+  "description": "Intra Space Design DotNet",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intraspacedesign/intraspacedesign.net.git"
+  },
+  "keywords": [
+    "Intra",
+    "Space",
+    "Design",
+    "DotNet"
+  ],
+  "author": "Joshua L Geschwendt",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/intraspacedesign/intraspacedesign.net/issues"
+  },
+  "homepage": "https://github.com/intraspacedesign/intraspacedesign.net#readme"
+}
