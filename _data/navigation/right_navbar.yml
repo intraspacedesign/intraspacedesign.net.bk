@@ -1,5 +1,4 @@
-navbar_items:
-  - name: kldsjlkfasdf
-    link: lkdsjfladksf
-  - name: kalfjdalskfj
-    link: dlkfsjalksdfj
+- name: kldsjlkfasdf
+  link: lkdsjfladksf
+- name: kalfjdalskfj
+  link: dlkfsjalksdfj
