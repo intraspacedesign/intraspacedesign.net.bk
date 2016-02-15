@@ -1,4 +1,4 @@
-top_navigation_items:
+navbar_items:
   - name: Corporate
     link: /corporate/
   - name: Residential
@@ -9,8 +9,3 @@ top_navigation_items:
     link: /retail/
   - name: Seasonal Decor
     link: /seasonal-decor/
-right_navigation_items:
-  - name: kldsjlkfasdf
-    link: lkdsjfladksf
-  - name: kalfjdalskfj
-    link: dlkfsjalksdfj
