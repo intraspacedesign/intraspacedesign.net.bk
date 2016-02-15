@@ -1,6 +1,11 @@
-nav:
-  top:
-    - name: kldsjlkfasdf
-      link: lkdsjfladksf
-    - name: kalfjdalskfj
-      link: dlkfsjalksdfj
+top_navigation_items:
+  - name: kldsjlkfasdf
+    link: lkdsjfladksf
+  - name: kalfjdalskfj
+    link: dlkfsjalksdfj
+
+right_navigation_items:
+  - name: kldsjlkfasdf
+    link: lkdsjfladksf
+  - name: kalfjdalskfj
+    link: dlkfsjalksdfj
