@@ -1,9 +1,14 @@
 top_navigation_items:
-  - name: kldsjlkfasdf
-    link: lkdsjfladksf
-  - name: kalfjdalskfj
-    link: dlkfsjalksdfj
-
+  - name: Corporate
+    link: /corporate/
+  - name: Residential
+    link: /residential/
+  - name: Academic
+    link: /academic/
+  - name: Retail
+    link: /retail/
+  - name: Seasonal Decor
+    link: /seasonal-decore/
 right_navigation_items:
   - name: kldsjlkfasdf
     link: lkdsjfladksf
