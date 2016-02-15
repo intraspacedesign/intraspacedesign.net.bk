@@ -1,0 +1,40 @@
+---
+seo:
+  prefix: "og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article:http://ogp.me/ns/article#"
+  og:
+    title: "Your Title Here"
+    type: "article"
+    url: "https://example.com/"
+    image_path: "https://example.com/image.jpg"
+    description: "Your Description Here"
+    site_name: "Your FB_APP_ID"
+  fb:
+    app_id: "Your FB_APP_ID"
+  twitter:
+    card: "summary"
+    site: "Your @publisher_handle"
+    title: "Your Page Title"
+    description: "Your Page description less than 200 characters"
+    creator: "Your @author_handle"
+    image_path: "https://example.com/image.jpg"
+---
+
+<!-- Open Graph data -->
+<head prefix="{{ page.seo.prefix }}">
+<meta property="og:title" content="{{ page.seo.og.title }}" />
+<meta property="og:type" content="{{ page.seo.og.type }}" />
+<meta property="og:url" content="{{ page.seo.og.url }}" />
+<meta property="og:image" content="{{ page.seo.og.image_path }}" />
+<meta property="og:description" content="{{ page.seo.og.description }}" />
+<meta property="og:site_name" content="{{ page.seo.og.site_name }}" />
+<meta property="fb:app_id" content="{{ page.seo.fb.app_id }}" />
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="{{ page.seo.twitter.card }}">
+<meta name="twitter:site" content="{{ page.seo.twitter.site }}">
+<meta name="twitter:title" content="{{ page.seo.twitter.title }}">
+<meta name="twitter:description" content="{{ page.seo.twitter.description }}">
+<meta name="twitter:creator" content="{{ page.seo.twitter.creator }}">
+
+<!-- Twitter Summary card images must be at least 120x120px -->
+<meta name="twitter:image" content="{{ page.seo.twitter.image_path }}">

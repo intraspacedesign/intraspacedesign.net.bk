@@ -19,6 +19,7 @@ gulp.task('serve', gulp.series(
 
 
 const stylesSrc = [
+  '_includes/**/*.scss',
   'src/**/*.scss'
 ]
 const stylesDest = 'dist/css'
@@ -59,7 +60,8 @@ function startServer(neverDone) {
   return browserSync.init({
     files: [
       '_site/*.{css,html,js}',
-      '_site/**/*.{css,html,js}'
+      '_site/**/*.{css,html,js}',
+      'dist/**/*.{css,js}'
     ],
     server: {
       baseDir: [
