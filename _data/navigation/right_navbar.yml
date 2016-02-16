@@ -1,4 +1,10 @@
-- name: kldsjlkfasdf
-  link: lkdsjfladksf
-- name: kalfjdalskfj
-  link: dlkfsjalksdfj
+- name: Philosophy
+  link: /philosophy/
+- name: Design Services
+  link: /design-services/
+- name: Published Works / Awards
+  link: /awards/
+- name: Bio
+  link: /bio/
+- name: Contact
+  link: /contact/

@@ -3,26 +3,17 @@ layout: default
 images:
   - image_url_path: /uploads/steelcase_a.jpg
     image_name: Some text here
+  - image_url_path: /uploads/idk.jpg
+    image_name: Some text here
 ---
 
-<div class="home">
+<section class="home">
 
   {% for image in page.images %}
-  <img src="{{ image.image_url_path }}" alt="image.image_name">
+  <img hidden src="{{ image.image_url_path }}" alt="{{ image.image_name }}">
   {% endfor %}
 
-  <!--<h1 class="page-heading">Posts</h1>-->
-  <!--<ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>-->
-  <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
-
-</div>
+  <div class="content">
+    <p class="editable">Spaces that thoughtfully inspire you to improve your work and life. Welcome to Intra Space Design.</p>
+  </div>
+</section>

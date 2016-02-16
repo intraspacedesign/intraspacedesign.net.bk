@@ -51,8 +51,10 @@ production:
 
 # Handling Reading
 exclude:
+  - "jspm_packages"
   - "node_modules"
   - "src"
+  - "typings"
   - "Gemfile"
   - "Gemfile.lock"
   - "gulpfile.js"

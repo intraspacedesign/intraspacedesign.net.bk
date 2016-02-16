@@ -1,10 +1,10 @@
 - name: Corporate
-  link: /corporate/
+  link: /portfolio/corporate/
 - name: Residential
-  link: /residential/
+  link: /portfolio/residential/
 - name: Academic
-  link: /academic/
+  link: /portfolio/academic/
 - name: Retail
-  link: /retail/
+  link: /portfolio/retail/
 - name: Seasonal Decor
-  link: /seasonal-decor/
+  link: /portfolio/seasonal-decor/
