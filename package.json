@@ -4,8 +4,10 @@
   "description": "Intra Space Design DotNet",
   "main": "index.html",
   "scripts": {
-    "start": "node node_modules/gulp/bin/gulp.js serve",
-    "task": "node node_modules/gulp/bin/gulp.js",
+    "build:tools": "rm -rf -- gulpfile.js || true && tsc --project tools/gulpfile.ts/",
+    "gulp": "[ -e gulpfile.js ] || npm run build:tools && node node_modules/.bin/gulp",
+    "start": "npm run gulp serve",
+    "task": "npm run gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +30,7 @@
     "angular": "^1.5.0",
     "autoprefixer": "^6.3.3",
     "browser-sync": "2.11.1",
+    "del": "^2.2.0",
     "gulp": "gulpjs/gulp#56e3e56",
     "gulp-csso": "^1.0.1",
     "gulp-flatten": "^0.2.0",

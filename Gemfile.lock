@@ -54,16 +54,19 @@ GEM
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
+    rainbow (2.1.0)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     redcarpet (3.3.4)
-    rouge (1.10.1)
     safe_yaml (1.0.4)
     sass (3.4.21)
     sawyer (0.6.0)
       addressable (~> 2.3.5)
       faraday (~> 0.8, < 0.10)
+    scss-lint (0.37.0)
+      rainbow (~> 2.0)
+      sass (~> 3.4.1)
     toml (0.1.2)
       parslet (~> 1.5.0)
     yajl-ruby (1.2.1)
@@ -73,7 +76,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (= 2.4.0)
-  rouge
+  scss-lint (= 0.37.0)
 
 BUNDLED WITH
    1.11.2

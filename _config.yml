@@ -51,13 +51,21 @@ production:
 
 # Handling Reading
 exclude:
+  - ".vscode"
+  - ".workspace"
+  - "gulpfile.js"
   - "jspm_packages"
   - "node_modules"
   - "src"
+  - "tmp"
+  - "tools"
   - "typings"
+  - ".gitattributes"
+  - ".gitignore"
+  - ".scss-lint.yml"
+  - "config.js"
   - "Gemfile"
   - "Gemfile.lock"
-  - "gulpfile.js"
   - "package.json"
   - "README.md"
 
