@@ -2,13 +2,19 @@
   <div class="brand">
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
   </div>
+
   <nav class="top">
     <ul>
       {% for nav in site.data.navigation.top_navbar %}
+        {% if page.url %}
+          {{ page.url }}
+
+        {% endif %}
         <li><a href="{{ nav.link }}">{{ nav.name }}</a></li>
       {% endfor %}
     </ul>
   </nav>
+
   <nav class="right">
     <ul>
       {% for nav in site.data.navigation.right_navbar %}
