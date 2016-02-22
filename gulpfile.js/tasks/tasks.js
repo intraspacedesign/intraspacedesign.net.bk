@@ -12,12 +12,11 @@ var browserSync = require('browser-sync').create();
 function startServer(neverDone) {
     return browserSync.init({
         files: [
-            '_site/**/*.{css,html,js}',
-            'dist/**/*.{css,js}'
+            '_site/**/*.{css,html,js}'
         ],
         server: {
             baseDir: [
-                'dist', '_site'
+                '_site'
             ]
         }
     });

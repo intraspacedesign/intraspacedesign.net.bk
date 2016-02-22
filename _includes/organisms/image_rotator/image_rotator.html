@@ -1,0 +1,15 @@
+<!-- WARNING!!! this file is for usage reference only -->
+<!-- if changes are made to either ./_image_rotator.scss -->
+<!-- or ./image_rotator.ts please update the useage here -->
+
+<!-- Image Rotator Outlet -->
+<div class="o-image-rotator" data-image-rotator data-autoplay="true">
+  <div class="image-outlet" data-image-rotator-outlet></div>
+
+  <!-- Image Rotator Collection -->
+  <div class="image-collection" data-image-rotator-collection>
+    {% for image in page.images %}
+      <img src="{{image.image_url_path}}" alt="{{image.image_name}}" />
+    {% endfor %}
+  </div>
+</div>

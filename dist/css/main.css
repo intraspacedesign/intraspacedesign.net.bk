@@ -442,4 +442,17 @@ pre {
     width: -webkit-calc(100% - (30px / 2));
     width: calc(100% - (30px / 2)); } }
 
+.o-image-rotator .image-outlet {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url(http://lorempixel.com/400/200/);
+  background-size: cover; }
+
+.o-image-rotator .image-collection {
+  display: none !important; }
+
 /*# sourceMappingURL=main.css.map */
