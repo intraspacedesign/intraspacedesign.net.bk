@@ -1,7 +1,6 @@
 //
 // style tasks
 //
-var jekyll = require('./jekyll');
 var _a = require('gulp'), dest = _a.dest, parallel = _a.parallel, series = _a.series, src = _a.src, watch = _a.watch;
 var del = require('del');
 var plug = require('gulp-load-plugins')({
@@ -13,6 +12,7 @@ var plug = require('gulp-load-plugins')({
 function _src() {
     return [
         '**/*.scss',
+        '!_site/**',
         '!jspm_packages/**',
         '!node_modules/**'
     ];
@@ -58,13 +58,14 @@ function buildStyles() {
         .pipe(plug.sass())
         .pipe(plug.flatten())
         .pipe(plug.sourcemaps.write('.'))
-        .pipe(dest(_dest()));
+        .pipe(dest(_dest()))
+        .pipe(dest('_site/dist/css'));
 }
 exports.build = buildStyles;
 /**
  *
  */
 function watchStyles() {
-    return watch(_src(), series(cleanStyles, parallel(cleanStyles, buildStyles), jekyll.build));
+    return watch(_src(), series(cleanStyles, parallel(cleanStyles, buildStyles)));
 }
 exports.watch = watchStyles;

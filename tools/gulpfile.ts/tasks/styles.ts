@@ -18,6 +18,7 @@ const plug = require('gulp-load-plugins')({
 function _src():string[] {
   return [
     '**/*.scss',
+    '!_site/**',
     '!jspm_packages/**',
     '!node_modules/**'
   ]
@@ -67,6 +68,7 @@ function buildStyles() {
     .pipe(plug.flatten())
     .pipe(plug.sourcemaps.write('.'))
     .pipe(dest(_dest()))
+    .pipe(dest('_site/dist/css'))
 }
 
 /**
@@ -79,8 +81,7 @@ function watchStyles() {
       parallel(
         cleanStyles,
         buildStyles
-      ),
-      jekyll.build
+      )
     )
   )
 }

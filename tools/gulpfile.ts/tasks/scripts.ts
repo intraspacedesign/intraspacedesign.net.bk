@@ -64,7 +64,11 @@ function bundle(src, dest) {
   }
 }
 
-function buildScripts() {
+/**
+ *
+ */
+const buildScripts = buildScriptsFunc.call(null)
+function buildScriptsFunc() {
   return series(
     compile,
     bundle('dist/js/src/scripts/index.js', 'dist/js/scripts.js')
@@ -75,11 +79,9 @@ function watchScripts(done) {
   return watch(_src(),
     series(
       cleanScripts,
-      parallel(
-        checkScripts,
-        buildScripts
-      ),
-      jekyll.build
+      checkScripts,
+      compile,
+      bundle('dist/js/src/scripts/index.js', '_site/dist/js/scripts.js')
     )
   )
 }
@@ -88,7 +90,6 @@ export {
   cleanScripts as clean,
   cloneScripts as clone,
   checkScripts as check,
+  buildScripts as build,
   watchScripts as watch
 }
-
-export const build = buildScripts()

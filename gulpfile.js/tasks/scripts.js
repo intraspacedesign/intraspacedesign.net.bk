@@ -1,7 +1,6 @@
 //
 // style tasks
 //
-var jekyll = require('./jekyll');
 var _a = require('gulp'), dest = _a.dest, parallel = _a.parallel, series = _a.series, src = _a.src, watch = _a.watch;
 var del = require('del');
 var plug = require('gulp-load-plugins')({
@@ -53,11 +52,15 @@ function bundle(src, dest) {
         return builder.buildStatic(src, dest);
     };
 }
-function buildScripts() {
+/**
+ *
+ */
+var buildScripts = buildScriptsFunc.call(null);
+exports.build = buildScripts;
+function buildScriptsFunc() {
     return series(compile, bundle('dist/js/src/scripts/index.js', 'dist/js/scripts.js'));
 }
 function watchScripts(done) {
-    return watch(_src(), series(cleanScripts, parallel(checkScripts, buildScripts), jekyll.build));
+    return watch(_src(), series(cleanScripts, checkScripts, compile, bundle('dist/js/src/scripts/index.js', '_site/dist/js/scripts.js')));
 }
 exports.watch = watchScripts;
-exports.build = buildScripts();
