@@ -2,7 +2,7 @@
 //
 //
 
-import { jekyll } from './jekyll'
+import * as jekyll from './jekyll'
 import * as scripts from './scripts'
 import * as styles from './styles'
 
@@ -49,10 +49,11 @@ const WATCH_TASKS = [
 export const start = series(
   ...CLEAN_TASKS,
   parallel(...BUILD_TASKS),
-  jekyll('build'),
+  jekyll.build,
   parallel(
     ...WATCH_TASKS,
-    startServer
+    startServer,
+    jekyll.watch
   )
 )
 

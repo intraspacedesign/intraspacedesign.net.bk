@@ -2,7 +2,7 @@
 // style tasks
 //
 
-import { jekyll } from './jekyll'
+import * as jekyll from './jekyll'
 
 const {
   dest, parallel, series, src, watch
@@ -28,14 +28,6 @@ function _src():string[] {
  */
 function _dest():string {
   return 'dist/css'
-}
-
-export {
-  cleanStyles as clean,
-  cloneStyles as clone,
-  checkStyles as check,
-  buildStyles as build,
-  watchStyles as watch
 }
 
 /**
@@ -88,7 +80,15 @@ function watchStyles() {
         cleanStyles,
         buildStyles
       ),
-      jekyll('build')
+      jekyll.build
     )
   )
+}
+
+export {
+  cleanStyles as clean,
+  cloneStyles as clone,
+  checkStyles as check,
+  buildStyles as build,
+  watchStyles as watch
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "build:tools": "rm -rf -- gulpfile.js || true && tsc --project tools/gulpfile.ts/",
     "gulp": "[ -e gulpfile.js ] || npm run build:tools && node node_modules/.bin/gulp",
-    "start": "npm run gulp serve",
+    "start": "npm run gulp -- start",
     "task": "npm run gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -2,7 +2,7 @@
 // style tasks
 //
 
-import { jekyll } from './jekyll'
+import * as jekyll from './jekyll'
 
 const {
   dest, parallel, series, src, watch
@@ -16,7 +16,11 @@ const tsProject = plug.typescript.createProject('tsconfig.json')
 
 function _src():string[] {
   return [
-    ''
+    '**/*.ts',
+    '!jspm_packages/**',
+    '!node_modules/**',
+    '!tools/**',
+    '!typings/**'
   ]
 }
 
@@ -68,7 +72,16 @@ function buildScripts() {
 }
 
 function watchScripts(done) {
-  done()
+  return watch(_src(),
+    series(
+      cleanScripts,
+      parallel(
+        checkScripts,
+        buildScripts
+      ),
+      jekyll.build
+    )
+  )
 }
 
 export {

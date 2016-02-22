@@ -1,7 +1,7 @@
 //
 // style tasks
 //
-var jekyll_1 = require('./jekyll');
+var jekyll = require('./jekyll');
 var _a = require('gulp'), dest = _a.dest, parallel = _a.parallel, series = _a.series, src = _a.src, watch = _a.watch;
 var del = require('del');
 var plug = require('gulp-load-plugins')({
@@ -65,6 +65,6 @@ exports.build = buildStyles;
  *
  */
 function watchStyles() {
-    return watch(_src(), series(cleanStyles, parallel(cleanStyles, buildStyles), jekyll_1.jekyll('build')));
+    return watch(_src(), series(cleanStyles, parallel(cleanStyles, buildStyles), jekyll.build));
 }
 exports.watch = watchStyles;

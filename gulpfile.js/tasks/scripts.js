@@ -1,6 +1,7 @@
 //
 // style tasks
 //
+var jekyll = require('./jekyll');
 var _a = require('gulp'), dest = _a.dest, parallel = _a.parallel, series = _a.series, src = _a.src, watch = _a.watch;
 var del = require('del');
 var plug = require('gulp-load-plugins')({
@@ -9,7 +10,11 @@ var plug = require('gulp-load-plugins')({
 var tsProject = plug.typescript.createProject('tsconfig.json');
 function _src() {
     return [
-        ''
+        '**/*.ts',
+        '!jspm_packages/**',
+        '!node_modules/**',
+        '!tools/**',
+        '!typings/**'
     ];
 }
 function _dest() {
@@ -52,7 +57,7 @@ function buildScripts() {
     return series(compile, bundle('dist/js/src/scripts/index.js', 'dist/js/scripts.js'));
 }
 function watchScripts(done) {
-    done();
+    return watch(_src(), series(cleanScripts, parallel(checkScripts, buildScripts), jekyll.build));
 }
 exports.watch = watchScripts;
 exports.build = buildScripts();
